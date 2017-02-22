@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[WebStorm主题]]></title>
       <url>%2F2017%2F01%2F16%2Fwebstorm-scheme%2F</url>
-      <content type="text"><![CDATA[WebStorm是前端开发必备的IDE。它的功能强大自不必说，缺点也很明显，主题只有寥寥几种，UI面板粗糙。最近在网上看到这款@S1ngS1ng分享的主题，非常nice!感谢@S1ngS1ng的分享！主题GitHub地址主题安装说明效果： 下载1234# http$ git clone https://github.com/YutHelloWorld/dotFiles.git# ssh$ git clone git@github.com:YutHelloWorld/dotFiles.git 一些设置Terminal字体打开WebStorm -&gt; File -&gt; Setting -&gt;搜索框中搜索’console font’ -&gt;设置字体及大小效果 WebStorm 破解注册码破解地址]]></content>
+      <content type="text"><![CDATA[WebStorm是前端开发必备的IDE。它的功能强大自不必说，缺点也很明显，主题只有寥寥几种，UI面板粗糙。最近在网上看到这款@S1ngS1ng分享的主题，非常nice!感谢@S1ngS1ng的分享！主题GitHub地址主题安装说明效果： 下载1234# http$ git clone https://github.com/YutHelloWorld/dotFiles.git# ssh$ git clone git@github.com:YutHelloWorld/dotFiles.git 一些设置Terminal字体打开WebStorm -&gt; File -&gt; Setting -&gt;搜索框中搜索’console font’ -&gt;设置字体及大小效果 禁止实时自动保存Setting -&gt; Apearance behavior -&gt; System Setting 未保存时显示星星标记Setting -&gt; Edit -&gt; Genereal -&gt; Edit Tab WebStorm 破解注册码破解地址]]></content>
     </entry>
 
     
