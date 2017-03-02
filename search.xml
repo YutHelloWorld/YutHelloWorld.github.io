@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[前端生态最新最热资源]]></title>
+      <url>%2F2017%2F03%2F02%2Ffront-end-resource%2F</url>
+      <content type="text"><![CDATA[ES6 es6-cheatsheet ECMAScript 6 入门 Webpack WebpackTutorial Webpack-demos React React React-Demos React-Router React-Router中文 React-Router官方示例库 Redux Redux中文 极好的精简Redux教程 UI框架 ant amazeui-react material-ui ant-mobile eslint eslint中文 脚手架 完美react-redux-express全栈脚手架]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[WebStorm设置的那些坑]]></title>
       <url>%2F2017%2F01%2F16%2Fwebstorm-scheme%2F</url>
       <content type="text"><![CDATA[WebStorm是前端开发必备的IDE。它的功能强大自不必说，缺点也很明显，主题只有寥寥几种，UI面板粗糙。最近在网上看到这款@S1ngS1ng分享的主题，非常nice!感谢@S1ngS1ng的分享！主题GitHub地址主题安装说明效果： 下载1234# http$ git clone https://github.com/YutHelloWorld/dotFiles.git# ssh$ git clone git@github.com:YutHelloWorld/dotFiles.git 一些设置Terminal字体打开WebStorm -&gt; File -&gt; Setting -&gt;搜索框中搜索’console font’ -&gt;设置字体及大小效果 禁止实时自动保存Setting -&gt; Apearance behavior -&gt; System Setting 未保存时显示星星标记Setting -&gt; Edit -&gt; Genereal -&gt; Edit Tab 鼠标双击选中驼峰式命名的变量 Setting(Mac下Prefences) -&gt; Edit -&gt; General -&gt; 取消选中Honor &quot;CamelHumps&quot; words settings when selecting on double click Setting(Mac下Prefences) -&gt; Edit -&gt; General -&gt; Smart Keys -&gt; 选中Use &quot;CamelHumps&quot; words. WebStorm 破解注册码破解地址 WebStrom 授权服务器 http://idea.imsxm.com/ http://idea.iteblog.com/key.php]]></content>
