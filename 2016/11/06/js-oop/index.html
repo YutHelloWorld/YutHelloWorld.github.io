@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -107,7 +107,7 @@
 <meta property="og:image" content="http://yuboyan.com/2016/11/06/js-oop/foo.proto.jpg">
 <meta property="og:image" content="http://yuboyan.com/2016/11/06/js-oop/oop_test.jpg">
 <meta property="og:image" content="http://yuboyan.com/2016/11/06/js-oop/proto.jpg">
-<meta property="og:updated_time" content="2016-12-10T12:36:46.000Z">
+<meta property="og:updated_time" content="2017-03-09T03:43:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript OOP 继承与原型链详解">
 <meta name="twitter:description" content="什么是OOP？面向对象程序设计（英语：Object-oriented programming，缩写：OOP）是种具有对象概念的程序编程范型，同时也是一种程序开发的方法。它可能包含数据、属性、代码与方法。对象则指的是类的实例。它将对象作为程序的基本单元，将程序和数据封装其中，以提高软件的重用性、灵活性和扩展性，对象里的程序可以访问及经常修改对象相关连的数据。  
@@ -120,7 +120,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -388,27 +388,27 @@
 <a id="more"></a> 
 <h3 id="proto"><a href="#proto" class="headerlink" title="__proto__"></a>__proto__</h3><p><code>__proto__</code>是对象的一个内部隐藏属性，它的值是该对象的原型。<br><code>__proto__</code>属性可用于获取对象的原型。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">x</span>:<span class="number">1</span>&#125;;</div><div class="line">obj  </div><div class="line">obj.__proto__ === <span class="built_in">Object</span>.prototype;</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(obj) === <span class="built_in">Object</span>.prototype</div></pre></td></tr></table></figure></p>
 <p> 从 ECMAScript 6 开始，<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf" title="Object.getProtoypeOf(obj)" target="_blank" rel="external">Object.getProtoypeOf(obj)</a>方法返回指定对象的原型（也就是该对象内部属性[[prototype]]的值）,<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf" title="Object.getProtoypeOf(obj, prototype)" target="_blank" rel="external">Object.setProtoypeOf(obj, prototype)</a>将一个指定的对象的原型设置为另一个对象或者null(既对象的[[Prototype]]内部属性).</p>
-<img src="/2016/11/06/js-oop/obj.jpg" alt="obj.jpg" title="">
+<img src="/2016/11/06/js-oop/obj.jpg" class="full-image">
 <h3 id="构造函数的prototype属性"><a href="#构造函数的prototype属性" class="headerlink" title="构造函数的prototype属性"></a>构造函数的prototype属性</h3><blockquote>
 <p>JavaScript 不包含传统的类继承模型，而是使用 prototype 原型模型。</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">Foo.prototype</div></pre></td></tr></table></figure>
-<img src="/2016/11/06/js-oop/Foo.jpg" alt="Foo.jpg" title="">  
+<img src="/2016/11/06/js-oop/Foo.jpg" class="full-image">  
 <p>我们创建的每一个函数都会有<code>prototype</code>预设属性，<code>Foo.prototype</code>是一个对象。<code>Foo.protoytype</code>结构：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Foo.prototype</div><div class="line">&#123;</div><div class="line">	<span class="attr">constructor</span>: <span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>),</span></div><div class="line">	<span class="title">__proto__</span>: <span class="title">Object</span>.<span class="title">prototype</span>，</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>通常，我们说<code>Foo.prototype</code>就是<code>Foo</code>的原型。</p>
 <p>我们看到，<code>Foo.prototype</code>中包含<code>construtor</code>属性和<code>__proto__</code>属性，<code>contructor</code>就是构造函数<code>Foo</code>本身，<code>__proto__</code>属性指向对象原型。  </p>
 <p>对象原型<code>Object.prototype</code>包含了一些方法如 <code>tostring</code>, <code>valueOf</code> 。  </p>
-<img src="/2016/11/06/js-oop/Object.prototype.jpg" alt="Object.prototype.jpg" title="">
+<img src="/2016/11/06/js-oop/Object.prototype.jpg" class="full-image">
 <h3 id="如何为Foo的原型添加属性"><a href="#如何为Foo的原型添加属性" class="headerlink" title="如何为Foo的原型添加属性"></a>如何为Foo的原型添加属性</h3><p>添加属性方法只需<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Foo.prototype.sayHi=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'Hi'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>这样所有构造函数<code>Foo</code> new出来的实例都会有<code>sayHi</code>属性</p>
 <h3 id="构造函数Foo与new一个实例"><a href="#构造函数Foo与new一个实例" class="headerlink" title="构造函数Foo与new一个实例"></a>构造函数Foo与new一个实例</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">this</span>.x = <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> foo = <span class="keyword">new</span> Foo();</div><div class="line">Foo.prototype.sayHi=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'Hi'</span>);</div><div class="line">&#125;</div><div class="line">foo.x;	<span class="comment">//1</span></div><div class="line">foo.sayHi();	<span class="comment">//Hi</span></div></pre></td></tr></table></figure>
-<img src="/2016/11/06/js-oop/foo.sayHi.jpg" alt="foo.sayHi.jpg" title="">
-<p>实例foo的原型就是<code>Foo.prototype</code><br><img src="/2016/11/06/js-oop/foo.proto.jpg" alt="foo.proto.jpg" title=""></p>
+<img src="/2016/11/06/js-oop/foo.sayHi.jpg" class="full-image">
+<p>实例foo的原型就是<code>Foo.prototype</code><br><img src="/2016/11/06/js-oop/foo.proto.jpg" class="full-image"></p>
 <h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><h3 id="一个例子"><a href="#一个例子" class="headerlink" title="一个例子"></a>一个例子</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>)</span>&#123;</div><div class="line">	<span class="keyword">this</span>.name = name;</div><div class="line">	<span class="keyword">this</span>.age = age;</div><div class="line">&#125;</div><div class="line">Person.prototype.hi=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'Hi,my name is'</span>,<span class="keyword">this</span>.name,<span class="string">",I'm"</span>,<span class="keyword">this</span>.age,<span class="string">'years old now.'</span>)</div><div class="line">&#125;;</div><div class="line">Person.prototype.LEGS_NUM = <span class="number">2</span>;</div><div class="line">Person.prototype.ARMS_NUM = <span class="number">2</span>;</div><div class="line">Person.prototype.walk = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.name,<span class="string">'is walking..'</span>);</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,className</span>)</span>&#123;</div><div class="line">	Person.call(<span class="keyword">this</span>,name,age);</div><div class="line">	<span class="keyword">this</span>.className = className;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*使用Object.create一个新的对象，如果Student.prototype=Person.prototype,会导致Student.prototype增加属性时，Person.prototype也增加*/</span></div><div class="line">Student.prototype = <span class="built_in">Object</span>.create(Person.prototype);</div><div class="line"><span class="comment">/*上一步时Student.prototype的constructor变为了Person,这里要重新设置为Student*/</span></div><div class="line">Student.prototype.constructor = Student;</div><div class="line">Student.prototype.hi = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'Hi,my name is'</span>,<span class="keyword">this</span>.name,<span class="string">",I'm"</span>,<span class="keyword">this</span>.age,<span class="string">'years old now,and from'</span>,<span class="keyword">this</span>.className,<span class="string">'.'</span>);</div><div class="line">&#125;;</div><div class="line">Student.prototype.learn = <span class="function"><span class="keyword">function</span>(<span class="params">subject</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.name,<span class="string">'is learning'</span>,subject,<span class="string">'at'</span>,<span class="keyword">this</span>.className,<span class="string">'.'</span>);</div><div class="line">&#125;;</div><div class="line"><span class="comment">//test</span></div><div class="line"><span class="keyword">var</span> bson = <span class="keyword">new</span> Student(<span class="string">'bson'</span>,<span class="number">27</span>,<span class="string">'Class 3,Grade 2'</span>);</div><div class="line">bson.hi();	<span class="comment">//Hi,my name is bson,I'm 27 years old now,and from Class3 Grade 2.</span></div><div class="line"><span class="built_in">console</span>.log(bson.LEGS_NUM);	<span class="comment">//2</span></div><div class="line">bson.walk();	<span class="comment">//bson is walking..</span></div><div class="line">bson.learn(<span class="string">'math'</span>);	<span class="comment">//bson is learning math at Class 3 Grade 2.</span></div></pre></td></tr></table></figure>
 <p>我们看下以上代码的流程，首先构造函数<code>Person</code>并给其原型添加一系列属性（如<code>hi</code>），然后构造函数<code>Student</code>,并将<code>Foo</code>的属性应用到<code>Student</code>,再通过<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Student.prototype = <span class="built_in">Object</span>.create(Person.prototype);</div><div class="line">Student.prototype.constructor = Student;</div></pre></td></tr></table></figure></p>
 <p>继承<code>Person</code>的原型。<br><code>Object.create</code>在ECMAScript 5才有，之前的版本，我们可以自行构造这个方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(!<span class="built_in">Object</span>.create)&#123;</div><div class="line">	<span class="built_in">Object</span>.create = <span class="function"><span class="keyword">function</span>(<span class="params">proto</span>)</span>&#123;</div><div class="line">		<span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">		F.prototype = proto;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> F();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<img src="/2016/11/06/js-oop/oop_test.jpg" alt="oop_test.jpg" title="">
-<p>根据控制台信息，很容易看出实例 <code>bson</code> 通过<code>__proto__</code>指向 <code>Student.prototype</code> ,而<code>Student.prototype</code> 通过<code>__proto__</code>指向 <code>Person.prototype</code> ,<code>Person.prototype</code> 通过<code>__proto__</code>指向 <code>Object.prototype</code> 。这就是一条原型链。原型链上的所有方法 <code>bson</code>都可以调用。<br><img src="/2016/11/06/js-oop/proto.jpg" alt="proto.jpg" title=""></p>
+<img src="/2016/11/06/js-oop/oop_test.jpg" class="full-image">
+<p>根据控制台信息，很容易看出实例 <code>bson</code> 通过<code>__proto__</code>指向 <code>Student.prototype</code> ,而<code>Student.prototype</code> 通过<code>__proto__</code>指向 <code>Person.prototype</code> ,<code>Person.prototype</code> 通过<code>__proto__</code>指向 <code>Object.prototype</code> 。这就是一条原型链。原型链上的所有方法 <code>bson</code>都可以调用。<br><img src="/2016/11/06/js-oop/proto.jpg" class="full-image"></p>
 
       
     </div>
@@ -654,7 +654,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -735,6 +735,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
