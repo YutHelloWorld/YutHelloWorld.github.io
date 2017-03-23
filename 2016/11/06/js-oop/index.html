@@ -107,7 +107,7 @@
 <meta property="og:image" content="http://yuboyan.com/2016/11/06/js-oop/foo.proto.jpg">
 <meta property="og:image" content="http://yuboyan.com/2016/11/06/js-oop/oop_test.jpg">
 <meta property="og:image" content="http://yuboyan.com/2016/11/06/js-oop/proto.jpg">
-<meta property="og:updated_time" content="2017-03-22T03:17:52.000Z">
+<meta property="og:updated_time" content="2017-03-23T03:33:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript OOP 继承与原型链详解">
 <meta name="twitter:description" content="什么是OOP？面向对象程序设计（英语：Object-oriented programming，缩写：OOP）是种具有对象概念的程序编程范型，同时也是一种程序开发的方法。它可能包含数据、属性、代码与方法。对象则指的是类的实例。它将对象作为程序的基本单元，将程序和数据封装其中，以提高软件的重用性、灵活性和扩展性，对象里的程序可以访问及经常修改对象相关连的数据。  
@@ -386,7 +386,7 @@
 <p>虽然，原型继承经常被视作 JavaScript 的一个弱点，但事实上，原型继承模型比经典的继承模型更强大。举例来说，在原型继承模型的基础之上建立一个经典的继承模型是相当容易的。</p>
 </blockquote>
 <a id="more"></a> 
-<h3 id="proto"><a href="#proto" class="headerlink" title="__proto__"></a>__proto__</h3><p><code>__proto__</code>是对象的一个内部隐藏属性，它的值是该对象的原型。<br><code>__proto__</code>属性可用于获取对象的原型。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">x</span>:<span class="number">1</span>&#125;;</div><div class="line">obj  </div><div class="line">obj.__proto__ === <span class="built_in">Object</span>.prototype;</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(obj) === <span class="built_in">Object</span>.prototype</div></pre></td></tr></table></figure></p>
+<h3 id="proto"><a href="#proto" class="headerlink" title="__proto__"></a>__proto__</h3><p><code>__proto__</code>是对象的一个内部隐藏属性，它的值是该对象的原型。<br><code>__proto__</code>属性可用于获取对象的原型。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">x</span>:<span class="number">1</span>&#125;;<span class="comment">//var obj = new Object();obj.x = 1;</span></div><div class="line">obj  </div><div class="line">obj.__proto__ === <span class="built_in">Object</span>.prototype;</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(obj) === <span class="built_in">Object</span>.prototype</div></pre></td></tr></table></figure></p>
 <p> 从 ECMAScript 6 开始，<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf" title="Object.getProtoypeOf(obj)" target="_blank" rel="external">Object.getProtoypeOf(obj)</a>方法返回指定对象的原型（也就是该对象内部属性[[prototype]]的值）,<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf" title="Object.getProtoypeOf(obj, prototype)" target="_blank" rel="external">Object.setProtoypeOf(obj, prototype)</a>将一个指定的对象的原型设置为另一个对象或者null(既对象的[[Prototype]]内部属性).</p>
 <img src="/2016/11/06/js-oop/obj.jpg" alt="obj.jpg" title="">
 <h3 id="构造函数的prototype属性"><a href="#构造函数的prototype属性" class="headerlink" title="构造函数的prototype属性"></a>构造函数的prototype属性</h3><blockquote>
@@ -395,7 +395,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">Foo.prototype</div></pre></td></tr></table></figure>
 <img src="/2016/11/06/js-oop/Foo.jpg" alt="Foo.jpg" title="">  
 <p>我们创建的每一个函数都会有<code>prototype</code>预设属性，<code>Foo.prototype</code>是一个对象。<code>Foo.protoytype</code>结构：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Foo.prototype</div><div class="line">&#123;</div><div class="line">	<span class="attr">constructor</span>: <span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>),</span></div><div class="line">	<span class="title">__proto__</span>: <span class="title">Object</span>.<span class="title">prototype</span>，</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>通常，我们说<code>Foo.prototype</code>就是<code>Foo</code>的原型。</p>
+<p>通常，我们说<code>Foo.prototype</code>就是<code>Foo</code>的原型。Object构造函数用来创建对象。</p>
 <p>我们看到，<code>Foo.prototype</code>中包含<code>construtor</code>属性和<code>__proto__</code>属性，<code>contructor</code>就是构造函数<code>Foo</code>本身，<code>__proto__</code>属性指向对象原型。  </p>
 <p>对象原型<code>Object.prototype</code>包含了一些方法如 <code>tostring</code>, <code>valueOf</code> 。  </p>
 <img src="/2016/11/06/js-oop/Object.prototype.jpg" alt="Object.prototype.jpg" title="">
