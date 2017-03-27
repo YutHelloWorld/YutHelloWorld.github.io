@@ -110,10 +110,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="jqGrid表格控件实例">
 <meta property="og:url" content="http://yuboyan.com/2016/08/10/jqGrid-template/index.html">
-<meta property="og:site_name" content="{...Coding }">
+<meta property="og:site_name" content="Sven's Notes">
 <meta property="og:description" content="jqGrid 是一个用来显示网格数据的jQuery插件，通过使用jqGrid可以轻松实现前端页面与后台数据的ajax异步通信，也可前端页面中本地添加数据。
 下面给出一个本地添加数据的实例。">
-<meta property="og:updated_time" content="2016-11-06T09:16:44.000Z">
+<meta property="og:updated_time" content="2017-03-27T13:15:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jqGrid表格控件实例">
 <meta name="twitter:description" content="jqGrid 是一个用来显示网格数据的jQuery插件，通过使用jqGrid可以轻松实现前端页面与后台数据的ajax异步通信，也可前端页面中本地添加数据。
@@ -126,7 +126,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -151,7 +151,7 @@
 
 
 
-  <title> jqGrid表格控件实例 | {...Coding } </title>
+  <title> jqGrid表格控件实例 | Sven's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -196,7 +196,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">{...Coding }</span>
+        <span class="site-title">Sven's Notes</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -294,11 +294,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sven">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="{...Coding }">
+      <meta itemprop="name" content="Sven's Notes">
     </span>
 
     
@@ -361,21 +361,27 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/08/10/jqGrid-template/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/10/jqGrid-template/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
           
+             <span id="/2016/08/10/jqGrid-template/" class="leancloud_visitors" data-flag-title="jqGrid表格控件实例">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
 
           
@@ -396,7 +402,7 @@
         <p>jqGrid 是一个用来显示网格数据的jQuery插件，通过使用jqGrid可以轻松实现前端页面与后台数据的ajax异步通信，也可前端页面中本地添加数据。</p>
 <p>下面给出一个本地添加数据的实例。</p>
 <a id="more"></a>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--UTF-8编码  --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>jqGird<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--加载jquery核心文件  --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"../jquery/jquery-1.12.0.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--加载jqgrid核心文件  --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/jquery.jqGrid.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--加载jquery-ui核心文件  --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/jquery-ui.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--加载JqGrid文件  --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/grid.locale-en.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--加载jpgrid ui的样式文件  --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">media</span>=<span class="string">"screen"</span> <span class="attr">href</span>=<span class="string">"css/ui.jqgrid.css"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!--加载jquery ui的样式文件  --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">media</span>=<span class="string">"screen"</span> <span class="attr">href</span>=<span class="string">"css/jquery-ui.css"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!--加载jquery themes的样式文件  --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">media</span>=<span class="string">"screen"</span> <span class="attr">href</span>=<span class="string">"css/jquery-ui.theme.css"</span> /&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="xml"></span></div><div class="line">        $(function() &#123;</div><div class="line">            var $gridTable=$("#gridTable");</div><div class="line">            $gridTable.jqGrid(&#123;</div><div class="line">                datatype: "local",</div><div class="line">                mtype:"post",</div><div class="line">                height: 250,</div><div class="line">                /*autowidth:true,*/</div><div class="line">                colNames:['Id','Name','Student','Description'],</div><div class="line">                colModel:[&#123;</div><div class="line">                    name:'id',</div><div class="line">                    index:'id',</div><div class="line">                    width:60,</div><div class="line">                    sorttype:"int",</div><div class="line">                    hidden:true</div><div class="line">                &#125;, &#123;</div><div class="line">                    name:'name',</div><div class="line">                    index:'name',</div><div class="line">                    width:200,</div><div class="line">                    align:"center",</div><div class="line">                    sortable:false</div><div class="line">                &#125;,&#123;</div><div class="line">                    name:"student",</div><div class="line">                    index:"student",</div><div class="line">                    width:200,</div><div class="line">                    sortable:false,</div><div class="line">                    align:"center",</div><div class="line">                    formatter: function (cellvalue, options, rowObject) &#123;</div><div class="line">                        return strHtml='<span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"select_' +rowObject.id+'"</span>&gt;</span>'+</div><div class="line">                                '<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>Yes<span class="tag">&lt;/<span class="name">option</span>&gt;</span>' +</div><div class="line">                                '<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>No<span class="tag">&lt;/<span class="name">option</span>&gt;</span>' +</div><div class="line">                                '<span class="tag">&lt;/<span class="name">select</span>&gt;</span> ';</div><div class="line">                    &#125;</div><div class="line">                &#125;, &#123;</div><div class="line">                    name: 'additionalInfo',</div><div class="line">                    index:'additionalInfo',</div><div class="line">                    width:200,</div><div class="line">                    align:"center"</div><div class="line">                &#125;],</div><div class="line">                onSelectRow: function (id) &#123;</div><div class="line">                    var data=$("#select_"+id).find("option:selected").text();</div><div class="line">                    console.log(data);</div><div class="line">                &#125;,</div><div class="line">                multiselect:true,</div><div class="line">                multiboxonly:true,</div><div class="line">                sortname:'id',</div><div class="line">                sortorder:'asc',</div><div class="line">                viewrecords:true,</div><div class="line">                rowNum:10,</div><div class="line">                rowList:[10,20,30],</div><div class="line">                pager:"#gridPager",</div><div class="line">                caption: "List"</div><div class="line">            &#125;).navGrid('#gridPager',&#123;edit:true,add:true,del:true&#125;);</div><div class="line"></div><div class="line">            /*表格数据*/</div><div class="line">            var mydata = [</div><div class="line">                &#123;id:"1",name:"polaris",additionalInfo:"男"&#125;,</div><div class="line">                &#123;id:"2",name:"李四",additionalInfo:"女"&#125;,</div><div class="line">                &#123;id:"3",name:"王五",additionalInfo:"男"&#125;,</div><div class="line">                &#123;id:"4",name:"马六",additionalInfo:"女"&#125;,</div><div class="line">                &#123;id:"5",name:"赵钱",additionalInfo:"男"&#125;,</div><div class="line">                &#123;id:"6",name:"小毛",additionalInfo:"男"&#125;,</div><div class="line">                &#123;id:"7",name:"小李",additionalInfo:"女"&#125;,</div><div class="line">                &#123;id:"8",name:"小三",additionalInfo:"男"&#125;,</div><div class="line">                &#123;id:"9",name:"孙先",additionalInfo:"男"&#125;</div><div class="line">            ];</div><div class="line">            /*逐行添加数据*/</div><div class="line">            $.each(mydata, function (i, item) &#123;</div><div class="line">                $gridTable.jqGrid('addRowData',item.id,item);</div><div class="line">            &#125;);</div><div class="line">            /*删除一行数据*/</div><div class="line">            $gridTable.jqGrid('delRowData',1);</div><div class="line">            /*刷新表格，排序并刷出总页数*/</div><div class="line">            $gridTable.trigger("reloadGrid");</div><div class="line">            /*获得选中的多行ID*/</div><div class="line">            var selectedRowId_array=$gridTable.jqGrid("getGridParam",'selarrrow');</div><div class="line">            console.log(selectedRowId_array);</div><div class="line">            /*总记录，recount为显示的=rowNum*/</div><div class="line">            console.log($gridTable.jqGrid("getGridParam",'records'));</div><div class="line">            /*清除表格数据*/</div><div class="line">            /*jQuery("#gridTable").clearGridData();*/</div><div class="line">        &#125;);</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">id</span>=<span class="string">"gridTable"</span>&gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gridPager"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--UTF-8编码  --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>jqGird<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--加载jquery核心文件  --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"../jquery/jquery-1.12.0.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--加载jqgrid核心文件  --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/jquery.jqGrid.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--加载jquery-ui核心文件  --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/jquery-ui.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--加载JqGrid文件  --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/grid.locale-en.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--加载jpgrid ui的样式文件  --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">media</span>=<span class="string">"screen"</span> <span class="attr">href</span>=<span class="string">"css/ui.jqgrid.css"</span> /&gt;</span></div><div class="line">  <span class="comment">&lt;!--加载jquery ui的样式文件  --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">media</span>=<span class="string">"screen"</span> <span class="attr">href</span>=<span class="string">"css/jquery-ui.css"</span> /&gt;</span></div><div class="line">  <span class="comment">&lt;!--加载jquery themes的样式文件  --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">media</span>=<span class="string">"screen"</span> <span class="attr">href</span>=<span class="string">"css/jquery-ui.theme.css"</span> /&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> $gridTable=$(<span class="string">"#gridTable"</span>);</div><div class="line">    $gridTable.jqGrid(&#123;</div><div class="line">      <span class="attr">datatype</span>: <span class="string">"local"</span>,</div><div class="line">      <span class="attr">mtype</span>:<span class="string">"post"</span>,</div><div class="line">      <span class="attr">height</span>: <span class="number">250</span>,</div><div class="line">      <span class="comment">/*autowidth:true,*/</span></div><div class="line">      colNames:[<span class="string">'Id'</span>,<span class="string">'Name'</span>,<span class="string">'Student'</span>,<span class="string">'Description'</span>],</div><div class="line">      <span class="attr">colModel</span>:[&#123;</div><div class="line">        <span class="attr">name</span>:<span class="string">'id'</span>,</div><div class="line">        <span class="attr">index</span>:<span class="string">'id'</span>,</div><div class="line">        <span class="attr">width</span>:<span class="number">60</span>,</div><div class="line">        <span class="attr">sorttype</span>:<span class="string">"int"</span>,</div><div class="line">        <span class="attr">hidden</span>:<span class="literal">true</span></div><div class="line">      &#125;, &#123;</div><div class="line">        <span class="attr">name</span>:<span class="string">'name'</span>,</div><div class="line">        <span class="attr">index</span>:<span class="string">'name'</span>,</div><div class="line">        <span class="attr">width</span>:<span class="number">200</span>,</div><div class="line">        <span class="attr">align</span>:<span class="string">"center"</span>,</div><div class="line">        <span class="attr">sortable</span>:<span class="literal">false</span></div><div class="line">      &#125;,&#123;</div><div class="line">        <span class="attr">name</span>:<span class="string">"student"</span>,</div><div class="line">        <span class="attr">index</span>:<span class="string">"student"</span>,</div><div class="line">        <span class="attr">width</span>:<span class="number">200</span>,</div><div class="line">        <span class="attr">sortable</span>:<span class="literal">false</span>,</div><div class="line">        <span class="attr">align</span>:<span class="string">"center"</span>,</div><div class="line">        <span class="attr">formatter</span>: <span class="function"><span class="keyword">function</span> (<span class="params">cellvalue, options, rowObject</span>) </span>&#123;</div><div class="line">          <span class="keyword">return</span> strHtml=<span class="string">'&lt;select id="select_'</span> +rowObject.id+<span class="string">'"&gt;'</span>+</div><div class="line">            <span class="string">'&lt;option value=""&gt;Yes&lt;/option&gt;'</span> +</div><div class="line">            <span class="string">'&lt;option value=""&gt;No&lt;/option&gt;'</span> +</div><div class="line">            <span class="string">'&lt;/select&gt; '</span>;</div><div class="line">        &#125;</div><div class="line">      &#125;, &#123;</div><div class="line">        <span class="attr">name</span>: <span class="string">'additionalInfo'</span>,</div><div class="line">        <span class="attr">index</span>:<span class="string">'additionalInfo'</span>,</div><div class="line">        <span class="attr">width</span>:<span class="number">200</span>,</div><div class="line">        <span class="attr">align</span>:<span class="string">"center"</span></div><div class="line">      &#125;],</div><div class="line">      <span class="attr">onSelectRow</span>: <span class="function"><span class="keyword">function</span> (<span class="params">id</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> data=$(<span class="string">"#select_"</span>+id).find(<span class="string">"option:selected"</span>).text();</div><div class="line">        <span class="built_in">console</span>.log(data);</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">multiselect</span>:<span class="literal">true</span>,</div><div class="line">      <span class="attr">multiboxonly</span>:<span class="literal">true</span>,</div><div class="line">      <span class="attr">sortname</span>:<span class="string">'id'</span>,</div><div class="line">      <span class="attr">sortorder</span>:<span class="string">'asc'</span>,</div><div class="line">      <span class="attr">viewrecords</span>:<span class="literal">true</span>,</div><div class="line">      <span class="attr">rowNum</span>:<span class="number">10</span>,</div><div class="line">      <span class="attr">rowList</span>:[<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>],</div><div class="line">      <span class="attr">pager</span>:<span class="string">"#gridPager"</span>,</div><div class="line">      <span class="attr">caption</span>: <span class="string">"List"</span></div><div class="line">    &#125;).navGrid(<span class="string">'#gridPager'</span>,&#123;<span class="attr">edit</span>:<span class="literal">true</span>,<span class="attr">add</span>:<span class="literal">true</span>,<span class="attr">del</span>:<span class="literal">true</span>&#125;);</div><div class="line"></div><div class="line">    <span class="comment">/*表格数据*/</span></div><div class="line">    <span class="keyword">var</span> mydata = [</div><div class="line">      &#123;<span class="attr">id</span>:<span class="string">"1"</span>,<span class="attr">name</span>:<span class="string">"polaris"</span>,<span class="attr">additionalInfo</span>:<span class="string">"男"</span>&#125;,</div><div class="line">      &#123;<span class="attr">id</span>:<span class="string">"2"</span>,<span class="attr">name</span>:<span class="string">"李四"</span>,<span class="attr">additionalInfo</span>:<span class="string">"女"</span>&#125;,</div><div class="line">      &#123;<span class="attr">id</span>:<span class="string">"3"</span>,<span class="attr">name</span>:<span class="string">"王五"</span>,<span class="attr">additionalInfo</span>:<span class="string">"男"</span>&#125;,</div><div class="line">      &#123;<span class="attr">id</span>:<span class="string">"4"</span>,<span class="attr">name</span>:<span class="string">"马六"</span>,<span class="attr">additionalInfo</span>:<span class="string">"女"</span>&#125;,</div><div class="line">      &#123;<span class="attr">id</span>:<span class="string">"5"</span>,<span class="attr">name</span>:<span class="string">"赵钱"</span>,<span class="attr">additionalInfo</span>:<span class="string">"男"</span>&#125;,</div><div class="line">      &#123;<span class="attr">id</span>:<span class="string">"6"</span>,<span class="attr">name</span>:<span class="string">"小毛"</span>,<span class="attr">additionalInfo</span>:<span class="string">"男"</span>&#125;,</div><div class="line">      &#123;<span class="attr">id</span>:<span class="string">"7"</span>,<span class="attr">name</span>:<span class="string">"小李"</span>,<span class="attr">additionalInfo</span>:<span class="string">"女"</span>&#125;,</div><div class="line">      &#123;<span class="attr">id</span>:<span class="string">"8"</span>,<span class="attr">name</span>:<span class="string">"小三"</span>,<span class="attr">additionalInfo</span>:<span class="string">"男"</span>&#125;,</div><div class="line">      &#123;<span class="attr">id</span>:<span class="string">"9"</span>,<span class="attr">name</span>:<span class="string">"孙先"</span>,<span class="attr">additionalInfo</span>:<span class="string">"男"</span>&#125;</div><div class="line">    ];</div><div class="line">    <span class="comment">/*逐行添加数据*/</span></div><div class="line">    $.each(mydata, <span class="function"><span class="keyword">function</span> (<span class="params">i, item</span>) </span>&#123;</div><div class="line">      $gridTable.jqGrid(<span class="string">'addRowData'</span>,item.id,item);</div><div class="line">    &#125;);</div><div class="line">    <span class="comment">/*删除一行数据*/</span></div><div class="line">    $gridTable.jqGrid(<span class="string">'delRowData'</span>,<span class="number">1</span>);</div><div class="line">    <span class="comment">/*刷新表格，排序并刷出总页数*/</span></div><div class="line">    $gridTable.trigger(<span class="string">"reloadGrid"</span>);</div><div class="line">    <span class="comment">/*获得选中的多行ID*/</span></div><div class="line">    <span class="keyword">var</span> selectedRowId_array=$gridTable.jqGrid(<span class="string">"getGridParam"</span>,<span class="string">'selarrrow'</span>);</div><div class="line">    <span class="built_in">console</span>.log(selectedRowId_array);</div><div class="line">    <span class="comment">/*总记录，recount为显示的=rowNum*/</span></div><div class="line">    <span class="built_in">console</span>.log($gridTable.jqGrid(<span class="string">"getGridParam"</span>,<span class="string">'records'</span>));</div><div class="line">    <span class="comment">/*清除表格数据*/</span></div><div class="line">    <span class="comment">/*jQuery("#gridTable").clearGridData();*/</span></div><div class="line">  &#125;);</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">id</span>=<span class="string">"gridTable"</span>&gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gridPager"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <p><a href="http://www.trirand.com/blog/?page_id=6" target="_blank" rel="external">jqGrid下载</a></p>
 <p><a href="http://blog.mn886.net/jqGrid/" target="_blank" rel="external">中文指南</a></p>
 
@@ -420,6 +426,21 @@
     <div>
       
         
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Sven
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://yuboyan.com/2016/08/10/jqGrid-template/" title="jqGrid表格控件实例">http://yuboyan.com/2016/08/10/jqGrid-template/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
 
       
     </div>
@@ -441,8 +462,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/08/setInterval/" rel="next" title="setInterval 查询">
-                <i class="fa fa-chevron-left"></i> setInterval 查询
+              <a href="/2016/08/08/setInterval/" rel="next" title="setInterval 轮询">
+                <i class="fa fa-chevron-left"></i> setInterval 轮询
               </a>
             
           </div>
@@ -468,25 +489,6 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/08/10/jqGrid-template/"
-     data-title="jqGrid表格控件实例"
-     data-content=""
-     data-url="http://yuboyan.com/2016/08/10/jqGrid-template/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -497,10 +499,6 @@
 
           
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/08/10/jqGrid-template/"
-           data-title="jqGrid表格控件实例" data-url="http://yuboyan.com/2016/08/10/jqGrid-template/">
-      </div>
     
   </div>
 
@@ -527,7 +525,7 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.png"
+               src="/images/avatar.gif"
                alt="Sven" />
           <p class="site-author-name" itemprop="name">Sven</p>
            
@@ -572,6 +570,17 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/YutHelloWorld" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
           
         </div>
 
@@ -624,6 +633,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
         
       </div>
@@ -632,6 +661,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -714,52 +745,151 @@
 
   
 
-  
-    
+
   
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"yuboyan"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("B3OI22wbPAD2dgWTrzo7gMut-gzGzoHsz", "yWqhY99yUzV3C2E3y8f0SAG9");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
   </script>
 
-  
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
 
   
 

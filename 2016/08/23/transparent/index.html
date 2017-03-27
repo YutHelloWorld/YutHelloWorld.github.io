@@ -112,7 +112,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="css transparent的应用">
 <meta property="og:url" content="http://yuboyan.com/2016/08/23/transparent/index.html">
-<meta property="og:site_name" content="{...Coding }">
+<meta property="og:site_name" content="Sven's Notes">
 <meta property="og:description" content="transparenttransparent 的字面意思就是透明。它用来表示一个完全透明的颜色，即该颜色看上去将是背景色。也可以理解为它是 rgba(0,0,0,0) 的简写。
 值得注意的是:
 
@@ -120,7 +120,7 @@
 <meta property="og:image" content="http://yuboyan.com/2016/08/23/transparent/transparent1.png">
 <meta property="og:image" content="http://yuboyan.com/2016/08/23/transparent/transparent2.png">
 <meta property="og:image" content="http://yuboyan.com/2016/08/23/transparent/transparent3.png">
-<meta property="og:updated_time" content="2016-11-06T14:38:02.000Z">
+<meta property="og:updated_time" content="2017-03-27T13:00:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css transparent的应用">
 <meta name="twitter:description" content="transparenttransparent 的字面意思就是透明。它用来表示一个完全透明的颜色，即该颜色看上去将是背景色。也可以理解为它是 rgba(0,0,0,0) 的简写。
@@ -136,7 +136,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -161,7 +161,7 @@
 
 
 
-  <title> css transparent的应用 | {...Coding } </title>
+  <title> css transparent的应用 | Sven's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -206,7 +206,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">{...Coding }</span>
+        <span class="site-title">Sven's Notes</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -304,11 +304,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sven">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="{...Coding }">
+      <meta itemprop="name" content="Sven's Notes">
     </span>
 
     
@@ -371,21 +371,27 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/08/23/transparent/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/23/transparent/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
           
+             <span id="/2016/08/23/transparent/" class="leancloud_visitors" data-flag-title="css transparent的应用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
 
           
@@ -410,26 +416,17 @@
 </blockquote>
 <a id="more"></a>
 <h2 id="transparent-用于-border，绘制三角形"><a href="#transparent-用于-border，绘制三角形" class="headerlink" title="transparent 用于 border，绘制三角形"></a>transparent 用于 border，绘制三角形</h2><p>这算是 transparent 最常见的一个用法，用于绘制三角形。</p>
-<p><em>html :</em></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'div1'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'div2'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><em>css :</em></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.div1</span>&#123;</div><div class="line">  <span class="attribute">width</span>:<span class="number">0px</span>;</div><div class="line">  <span class="attribute">height</span>:<span class="number">0px</span>;</div><div class="line">  <span class="attribute">margin</span>:<span class="number">20px</span> auto;</div><div class="line">  <span class="attribute">border-top</span>:<span class="number">50px</span> solid yellowgreen;</div><div class="line">  <span class="attribute">border-bottom</span>:<span class="number">50px</span> solid deeppink;</div><div class="line">  <span class="attribute">border-left</span>:<span class="number">50px</span> solid bisque;</div><div class="line">  <span class="attribute">border-right</span>:<span class="number">50px</span> solid chocolate;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.div2</span>&#123;</div><div class="line">  <span class="attribute">width</span>:<span class="number">0px</span>;</div><div class="line">  <span class="attribute">height</span>:<span class="number">0px</span>;</div><div class="line">  <span class="attribute">margin</span>:<span class="number">20px</span> auto;</div><div class="line">  <span class="attribute">border-bottom</span>:<span class="number">50px</span> solid deeppink;</div><div class="line">  <span class="attribute">border-left</span>:<span class="number">50px</span> solid transparent;</div><div class="line">  <span class="attribute">border-right</span>:<span class="number">50px</span> solid transparent;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>效果:</strong></p>
 <img src="/2016/08/23/transparent/transparent1.png" alt="transparent1.png" title="">
 <h2 id="transparent-用于-border，实现增大点击热区"><a href="#transparent-用于-border，实现增大点击热区" class="headerlink" title="transparent 用于 border，实现增大点击热区"></a>transparent 用于 border，实现增大点击热区</h2><p>按钮是我们网页设计中十分重要的一环，而按钮的设计也与用户体验息息相关。让用户更容易的点击到按钮无疑能很好的增加用户体验，尤其是在移动端，按钮通常都很小，但是有时由于设计稿限制，我们不能直接去改变按钮元素的高宽。那么这个时候有什么办法在不改变按钮原本大小的情况下去增加他的点击热区呢？</p>
 <p>这里，借助透明的 border 可以轻松帮我们实现，利用一层透明的 <code>border:20px solid transparent</code> 我们可以这样写：</p>
-<p><em>html :</em> </p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Btn<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><em>css :</em></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;</div><div class="line">  <span class="attribute">width</span>:<span class="number">140px</span>;<span class="attribute">line-height</span>:<span class="number">48px</span>;</div><div class="line">  <span class="attribute">text-align</span>:center;</div><div class="line">  <span class="attribute">margin</span>:<span class="number">50px</span> auto;</div><div class="line">  <span class="attribute">color</span>:<span class="number">#333</span>;</div><div class="line">  <span class="attribute">cursor</span>:pointer;</div><div class="line">  <span class="attribute">background</span>:<span class="built_in">hsl</span>(200, 60%, 60%);</div><div class="line">  <span class="attribute">border</span>:<span class="number">20px</span> solid transparent;</div><div class="line">  <span class="attribute">background-clip</span>: padding-box;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">  <span class="attribute">background</span>:<span class="built_in">hsl</span>(100, 60%, 50%);</div><div class="line">  <span class="attribute">background-clip</span>: padding-box;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:active</span>&#123;</div><div class="line">  <span class="attribute">background</span>:<span class="built_in">hsl</span>(300, 60%, 70%);</div><div class="line">  <span class="attribute">background-clip</span>: padding-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>效果:</strong></p>
 <img src="/2016/08/23/transparent/transparent2.png" alt="transparent2.png" title="">
 <p>然而真实情况是有的时候我们的按钮必须要用到 border，而 border 又只能设置一重（无法像 box-shadow和 渐变一样设置多重 border），这个时候如果还需要运用这种方法，可以使用内阴影 box-shadow 模拟一层 border，像这样：</p>
-<p><em>html :</em></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Btn<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><em>css :</em></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;</div><div class="line">  <span class="attribute">width</span>:<span class="number">140px</span>;</div><div class="line">  <span class="attribute">line-height</span>:<span class="number">48px</span>;</div><div class="line">  <span class="attribute">text-align</span>:center;</div><div class="line">  <span class="attribute">margin</span>:<span class="number">50px</span> auto;</div><div class="line">  <span class="attribute">color</span>:<span class="built_in">hsla</span>(328, 100%, 54%,0.8);</div><div class="line">  <span class="attribute">cursor</span>:pointer;</div><div class="line">  <span class="attribute">border</span>:<span class="number">20px</span> solid transparent;</div><div class="line">  <span class="attribute">background-clip</span>: padding-box;</div><div class="line">  <span class="attribute">box-shadow</span>:inset <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1px</span> <span class="built_in">hsla</span>(328, 100%, 54%,0.8);</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">  <span class="attribute">background</span>:<span class="built_in">hsla</span>(328, 100%, 54%,0.8);</div><div class="line">  <span class="attribute">color</span>:white;</div><div class="line">  <span class="attribute">background-clip</span>: padding-box;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:active</span>&#123;</div><div class="line">  <span class="attribute">background</span>:<span class="built_in">hsla</span>(328, 100%, 54%,1);</div><div class="line">  <span class="attribute">color</span>:white;</div><div class="line">  <span class="attribute">background-clip</span>: padding-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>效果:</strong></p>
 <img src="/2016/08/23/transparent/transparent3.png" alt="transparent3.png" title="">
 
       
@@ -452,6 +449,21 @@
     <div>
       
         
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Sven
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://yuboyan.com/2016/08/23/transparent/" title="css transparent的应用">http://yuboyan.com/2016/08/23/transparent/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
 
       
     </div>
@@ -483,8 +495,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/24/resize/" rel="prev" title="手写div resize方法">
-                手写div resize方法 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/08/24/resize/" rel="prev" title="Div Resize方法">
+                Div Resize方法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -500,25 +512,6 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/08/23/transparent/"
-     data-title="css transparent的应用"
-     data-content=""
-     data-url="http://yuboyan.com/2016/08/23/transparent/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -529,10 +522,6 @@
 
           
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/08/23/transparent/"
-           data-title="css transparent的应用" data-url="http://yuboyan.com/2016/08/23/transparent/">
-      </div>
     
   </div>
 
@@ -568,7 +557,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.png"
+               src="/images/avatar.gif"
                alt="Sven" />
           <p class="site-author-name" itemprop="name">Sven</p>
            
@@ -613,6 +602,17 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/YutHelloWorld" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
           
         </div>
 
@@ -681,6 +681,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
         
       </div>
@@ -689,6 +709,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -771,52 +793,151 @@
 
   
 
-  
-    
+
   
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"yuboyan"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("B3OI22wbPAD2dgWTrzo7gMut-gzGzoHsz", "yWqhY99yUzV3C2E3y8f0SAG9");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
   </script>
 
-  
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
 
   
 

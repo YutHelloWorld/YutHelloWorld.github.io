@@ -111,13 +111,13 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何判断数据类型">
 <meta property="og:url" content="http://yuboyan.com/2016/12/19/typeof/index.html">
-<meta property="og:site_name" content="{...Coding }">
+<meta property="og:site_name" content="Sven's Notes">
 <meta property="og:description" content="JavaScript数据类型字符串（String）、数字(Number)、布尔(Boolean)、数组(Array)、对象(Object)、空（Null）、未定义（Undefined）。
 判断数据类型的方法toString.call(obj)方法可以输出一个字符串结果来判断数据类型
 12var arr=[1,2];toString.call(arr);">
 <meta property="og:image" content="http://yuboyan.com/2016/12/19/typeof/typeArr.jpg">
 <meta property="og:image" content="http://yuboyan.com/2016/12/19/typeof/typeAll.jpg">
-<meta property="og:updated_time" content="2016-12-20T07:40:48.000Z">
+<meta property="og:updated_time" content="2017-03-27T13:30:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何判断数据类型">
 <meta name="twitter:description" content="JavaScript数据类型字符串（String）、数字(Number)、布尔(Boolean)、数组(Array)、对象(Object)、空（Null）、未定义（Undefined）。
@@ -132,7 +132,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -157,7 +157,7 @@
 
 
 
-  <title> 如何判断数据类型 | {...Coding } </title>
+  <title> 如何判断数据类型 | Sven's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -202,7 +202,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">{...Coding }</span>
+        <span class="site-title">Sven's Notes</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -300,11 +300,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sven">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="{...Coding }">
+      <meta itemprop="name" content="Sven's Notes">
     </span>
 
     
@@ -367,21 +367,27 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/12/19/typeof/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/19/typeof/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
           
+             <span id="/2016/12/19/typeof/" class="leancloud_visitors" data-flag-title="如何判断数据类型">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
 
           
@@ -403,7 +409,7 @@
 <h2 id="判断数据类型的方法"><a href="#判断数据类型的方法" class="headerlink" title="判断数据类型的方法"></a>判断数据类型的方法</h2><p><code>toString.call(obj)</code>方法可以输出一个字符串结果来判断数据类型</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>];</div><div class="line">toString.call(arr);</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<p><strong>结果:</strong><br><code>[Object Array]</code><br><img src="/2016/12/19/typeof/typeArr.jpg" alt="typeArr.jpg" title=""><br>同理，<br><img src="/2016/12/19/typeof/typeAll.jpg" alt="typeAll.jpg" title=""></p>
+<p><code>[Object Array]</code><br><img src="/2016/12/19/typeof/typeArr.jpg" alt="typeArr.jpg" title=""><br>同理，<br><img src="/2016/12/19/typeof/typeAll.jpg" alt="typeAll.jpg" title=""></p>
 <h2 id="jQuery-type方法"><a href="#jQuery-type方法" class="headerlink" title="jQuery type方法"></a>jQuery type方法</h2><p>jQuery提供了一系列判断数据类型的API<br><code>$.isFunction</code>判断是否是一个函数方法,返回一个布尔值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">$.isFunction(foo);	<span class="comment">//true</span></div></pre></td></tr></table></figure></p>
 <p><code>$.isNumeric</code>判断是否是数字<br><code>$.isPlainObject</code>判断是否是对象<br><code>$.isWindow</code>判断是否是个window对象<br><code>$.isArray</code>判断是否是个数组<br><code>$.isEmptyObject</code>判断是否是空对象<br><code>$.type</code>获取变量数据类型，返回一个字符串</p>
 
@@ -427,6 +433,21 @@
     <div>
       
         
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Sven
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://yuboyan.com/2016/12/19/typeof/" title="如何判断数据类型">http://yuboyan.com/2016/12/19/typeof/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
 
       
     </div>
@@ -458,8 +479,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/16/webstorm-scheme/" rel="prev" title="WebStorm设置的那些坑">
-                WebStorm设置的那些坑 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/16/webstorm-scheme/" rel="prev" title="WebStorm常见问题汇总">
+                WebStorm常见问题汇总 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -475,25 +496,6 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/12/19/typeof/"
-     data-title="如何判断数据类型"
-     data-content=""
-     data-url="http://yuboyan.com/2016/12/19/typeof/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -504,10 +506,6 @@
 
           
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/12/19/typeof/"
-           data-title="如何判断数据类型" data-url="http://yuboyan.com/2016/12/19/typeof/">
-      </div>
     
   </div>
 
@@ -543,7 +541,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.png"
+               src="/images/avatar.gif"
                alt="Sven" />
           <p class="site-author-name" itemprop="name">Sven</p>
            
@@ -588,6 +586,17 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/YutHelloWorld" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
           
         </div>
 
@@ -656,6 +665,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
         
       </div>
@@ -664,6 +693,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -746,52 +777,151 @@
 
   
 
-  
-    
+
   
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"yuboyan"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("B3OI22wbPAD2dgWTrzo7gMut-gzGzoHsz", "yWqhY99yUzV3C2E3y8f0SAG9");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
   </script>
 
-  
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
 
   
 

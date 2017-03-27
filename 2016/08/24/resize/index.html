@@ -105,16 +105,16 @@
 
 
 
-<meta name="description" content="当一个&amp;lt;div&amp;gt;需要实现resize时，除了使用jQuery UI 的resizable插件，也可以自己编写JS实现，这时就需要用到js的mousedown,mousemove,mouseup事件，下面直接上例子：">
+<meta name="description" content="当一个&amp;lt;div&amp;gt;需要实现resize时，除了使用jQuery UI 的resizable插件，也可以自己编写JS实现，这时就需要用到js的mousedown,mousemove,mouseup事件，源码：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="手写div resize方法">
+<meta property="og:title" content="Div Resize方法">
 <meta property="og:url" content="http://yuboyan.com/2016/08/24/resize/index.html">
-<meta property="og:site_name" content="{...Coding }">
-<meta property="og:description" content="当一个&amp;lt;div&amp;gt;需要实现resize时，除了使用jQuery UI 的resizable插件，也可以自己编写JS实现，这时就需要用到js的mousedown,mousemove,mouseup事件，下面直接上例子：">
-<meta property="og:updated_time" content="2016-11-06T09:21:00.000Z">
+<meta property="og:site_name" content="Sven's Notes">
+<meta property="og:description" content="当一个&amp;lt;div&amp;gt;需要实现resize时，除了使用jQuery UI 的resizable插件，也可以自己编写JS实现，这时就需要用到js的mousedown,mousemove,mouseup事件，源码：">
+<meta property="og:updated_time" content="2017-03-27T13:28:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="手写div resize方法">
-<meta name="twitter:description" content="当一个&amp;lt;div&amp;gt;需要实现resize时，除了使用jQuery UI 的resizable插件，也可以自己编写JS实现，这时就需要用到js的mousedown,mousemove,mouseup事件，下面直接上例子：">
+<meta name="twitter:title" content="Div Resize方法">
+<meta name="twitter:description" content="当一个&amp;lt;div&amp;gt;需要实现resize时，除了使用jQuery UI 的resizable插件，也可以自己编写JS实现，这时就需要用到js的mousedown,mousemove,mouseup事件，源码：">
 
 
 
@@ -123,7 +123,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -148,7 +148,7 @@
 
 
 
-  <title> 手写div resize方法 | {...Coding } </title>
+  <title> Div Resize方法 | Sven's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -193,7 +193,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">{...Coding }</span>
+        <span class="site-title">Sven's Notes</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -291,11 +291,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sven">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="{...Coding }">
+      <meta itemprop="name" content="Sven's Notes">
     </span>
 
     
@@ -307,7 +307,7 @@
             
             
               
-                手写div resize方法
+                Div Resize方法
               
             
           </h1>
@@ -358,21 +358,27 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/08/24/resize/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/24/resize/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
           
+             <span id="/2016/08/24/resize/" class="leancloud_visitors" data-flag-title="Div Resize方法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
 
           
@@ -390,9 +396,9 @@
       
 
       
-        <p>当一个<code>&lt;div&gt;</code>需要实现resize时，除了使用jQuery UI 的resizable插件，也可以自己编写JS实现，这时<br>就需要用到js的<code>mousedown</code>,<code>mousemove</code>,<code>mouseup</code>事件，下面直接上例子：</p>
+        <p>当一个<code>&lt;div&gt;</code>需要实现resize时，除了使用jQuery UI 的resizable插件，也可以自己编写JS实现，这时<br>就需要用到js的<code>mousedown</code>,<code>mousemove</code>,<code>mouseup</code>事件，源码：</p>
 <a id="more"></a>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>draw<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/jquery-1.11.0.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">        <span class="selector-id">#drawBorder</span>&#123;</div><div class="line">            <span class="attribute">width</span>:<span class="number">600px</span>;</div><div class="line">            <span class="attribute">height</span>:<span class="number">2px</span>;</div><div class="line">            <span class="attribute">background</span>: deeppink;</div><div class="line">            <span class="attribute">cursor</span>: n-resize;</div><div class="line">            <span class="attribute">margin</span>:-<span class="number">10px</span> auto <span class="number">0</span> auto;</div><div class="line">            <span class="attribute">border-bottom</span>:<span class="number">10px</span> solid transparent ;</div><div class="line">            <span class="attribute">border-top</span>:<span class="number">10px</span> solid transparent;</div><div class="line">            <span class="attribute">-webkit-background-clip</span>: padding-box;</div><div class="line">            <span class="attribute">-moz-background-clip</span>: padding-box;</div><div class="line">            <span class="attribute">background-clip</span>: padding-box;</div><div class="line">        &#125;</div><div class="line">        <span class="selector-id">#content</span>&#123;</div><div class="line">            <span class="attribute">width</span>:<span class="number">600px</span>;</div><div class="line">            <span class="attribute">height</span>:<span class="number">300px</span>;</div><div class="line">            <span class="attribute">margin</span>:<span class="number">0</span> auto;</div><div class="line">            <span class="attribute">border</span>:<span class="number">1px</span> solid deeppink;</div><div class="line">        &#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"drawBorder"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">        $(<span class="string">"#drawBorder"</span>).mousedown(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">var</span> mouseDownY=$(<span class="keyword">this</span>).offset().top;    <span class="comment">//鼠标点击下边缘时，下边缘距离窗口顶端的高度。</span></div><div class="line">            <span class="keyword">var</span> contentHeight=$(<span class="string">"#content"</span>).height();</div><div class="line">            $(<span class="built_in">document</span>).mousemove(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line">                <span class="keyword">var</span> currentHeight=contentHeight+e.clientY-mouseDownY;   <span class="comment">//e.clientY为鼠标移动时Y轴坐标,currentHeight为当前高度</span></div><div class="line">                $(<span class="string">"#content"</span>).height(currentHeight+<span class="string">"px"</span>);   <span class="comment">//重置高度</span></div><div class="line">            &#125;);</div><div class="line">        &#125;);</div><div class="line">        $(<span class="built_in">document</span>).mouseup(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $(<span class="built_in">document</span>).unbind(<span class="string">"mousemove"</span>);    <span class="comment">//鼠标弹起时，解除`movemove`事件的监听</span></div><div class="line">        &#125;);</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>draw<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/jquery-1.11.0.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">      <span class="selector-id">#drawBorder</span>&#123;</div><div class="line">        <span class="attribute">width</span>:<span class="number">600px</span>;</div><div class="line">        <span class="attribute">height</span>:<span class="number">2px</span>;</div><div class="line">        <span class="attribute">background</span>: deeppink;</div><div class="line">        <span class="attribute">cursor</span>: n-resize;</div><div class="line">        <span class="attribute">margin</span>:-<span class="number">10px</span> auto <span class="number">0</span> auto;</div><div class="line">        <span class="attribute">border-bottom</span>:<span class="number">10px</span> solid transparent ;</div><div class="line">        <span class="attribute">border-top</span>:<span class="number">10px</span> solid transparent;</div><div class="line">        <span class="attribute">-webkit-background-clip</span>: padding-box;</div><div class="line">        <span class="attribute">-moz-background-clip</span>: padding-box;</div><div class="line">        <span class="attribute">background-clip</span>: padding-box;</div><div class="line">      &#125;</div><div class="line">      <span class="selector-id">#content</span>&#123;</div><div class="line">        <span class="attribute">width</span>:<span class="number">600px</span>;</div><div class="line">        <span class="attribute">height</span>:<span class="number">300px</span>;</div><div class="line">        <span class="attribute">margin</span>:<span class="number">0</span> auto;</div><div class="line">        <span class="attribute">border</span>:<span class="number">1px</span> solid deeppink;</div><div class="line">      &#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"drawBorder"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">      $(<span class="string">"#drawBorder"</span>).mousedown(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> mouseDownY=$(<span class="keyword">this</span>).offset().top;    <span class="comment">//鼠标点击下边缘时，下边缘距离窗口顶端的高度。</span></div><div class="line">        <span class="keyword">var</span> contentHeight=$(<span class="string">"#content"</span>).height();</div><div class="line">        $(<span class="built_in">document</span>).mousemove(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line">          <span class="keyword">var</span> currentHeight=contentHeight+e.clientY-mouseDownY;   <span class="comment">//e.clientY为鼠标移动时Y轴坐标,currentHeight为当前高度</span></div><div class="line">          $(<span class="string">"#content"</span>).height(currentHeight+<span class="string">"px"</span>);   <span class="comment">//重置高度</span></div><div class="line">        &#125;);</div><div class="line">      &#125;);</div><div class="line">      $(<span class="built_in">document</span>).mouseup(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        $(<span class="built_in">document</span>).unbind(<span class="string">"mousemove"</span>);    <span class="comment">//鼠标弹起时，解除`movemove`事件的监听</span></div><div class="line">      &#125;);</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -413,6 +419,21 @@
     <div>
       
         
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Sven
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://yuboyan.com/2016/08/24/resize/" title="Div Resize方法">http://yuboyan.com/2016/08/24/resize/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
 
       
     </div>
@@ -461,25 +482,6 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/08/24/resize/"
-     data-title="手写div resize方法"
-     data-content=""
-     data-url="http://yuboyan.com/2016/08/24/resize/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -490,10 +492,6 @@
 
           
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/08/24/resize/"
-           data-title="手写div resize方法" data-url="http://yuboyan.com/2016/08/24/resize/">
-      </div>
     
   </div>
 
@@ -520,7 +518,7 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.png"
+               src="/images/avatar.gif"
                alt="Sven" />
           <p class="site-author-name" itemprop="name">Sven</p>
            
@@ -565,6 +563,17 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/YutHelloWorld" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
           
         </div>
 
@@ -617,6 +626,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
         
       </div>
@@ -625,6 +654,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -707,52 +738,151 @@
 
   
 
-  
-    
+
   
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"yuboyan"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("B3OI22wbPAD2dgWTrzo7gMut-gzGzoHsz", "yWqhY99yUzV3C2E3y8f0SAG9");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
   </script>
 
-  
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
 
   
 

@@ -105,30 +105,28 @@
 
 
 
-<meta name="description" content="一个例子12345var foo= function () &amp;#123;  var a=1;&amp;#125;;foo();console.log(typeof(a)); //undefined
+<meta name="description" content="闭包是指那些能够访问独立(自由)变量的函数 (变量在本地使用，但定义在一个封闭的作用域中)。换句话说，这些函数可以“记忆”它被创建时候的环境。
 
-可以看到，函数内变量a无法被外部访问。
-又一个例子12345function outer() &amp;#123;  var localVal = 1;  return localVal;&amp;#125;outer();">
+变量作用域考虑如下情况：
+12345var foo= function () &amp;#123;  var a=1;&amp;#125;;foo();console.log(typeof(a));  //undefined
+函数foo()创建了一个局部变量a，仅在函">
 <meta property="og:type" content="article">
 <meta property="og:title" content="闭包">
 <meta property="og:url" content="http://yuboyan.com/2016/08/21/closure/index.html">
-<meta property="og:site_name" content="{...Coding }">
-<meta property="og:description" content="一个例子12345var foo= function () &amp;#123;  var a=1;&amp;#125;;foo();console.log(typeof(a)); //undefined
+<meta property="og:site_name" content="Sven's Notes">
+<meta property="og:description" content="闭包是指那些能够访问独立(自由)变量的函数 (变量在本地使用，但定义在一个封闭的作用域中)。换句话说，这些函数可以“记忆”它被创建时候的环境。
 
-可以看到，函数内变量a无法被外部访问。
-又一个例子12345function outer() &amp;#123;  var localVal = 1;  return localVal;&amp;#125;outer();">
-<meta property="og:image" content="http://yuboyan.com/2016/08/21/closure/closure1.jpg">
-<meta property="og:image" content="http://yuboyan.com/2016/08/21/closure/closure2.jpg">
-<meta property="og:image" content="http://yuboyan.com/2016/08/21/closure/closure3.jpg">
-<meta property="og:image" content="http://yuboyan.com/2016/08/21/closure/closure4.jpg">
-<meta property="og:updated_time" content="2017-03-22T03:20:24.000Z">
+变量作用域考虑如下情况：
+12345var foo= function () &amp;#123;  var a=1;&amp;#125;;foo();console.log(typeof(a));  //undefined
+函数foo()创建了一个局部变量a，仅在函">
+<meta property="og:updated_time" content="2017-03-27T12:58:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="闭包">
-<meta name="twitter:description" content="一个例子12345var foo= function () &amp;#123;  var a=1;&amp;#125;;foo();console.log(typeof(a)); //undefined
+<meta name="twitter:description" content="闭包是指那些能够访问独立(自由)变量的函数 (变量在本地使用，但定义在一个封闭的作用域中)。换句话说，这些函数可以“记忆”它被创建时候的环境。
 
-可以看到，函数内变量a无法被外部访问。
-又一个例子12345function outer() &amp;#123;  var localVal = 1;  return localVal;&amp;#125;outer();">
-<meta name="twitter:image" content="http://yuboyan.com/2016/08/21/closure/closure1.jpg">
+变量作用域考虑如下情况：
+12345var foo= function () &amp;#123;  var a=1;&amp;#125;;foo();console.log(typeof(a));  //undefined
+函数foo()创建了一个局部变量a，仅在函">
 
 
 
@@ -137,7 +135,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -162,7 +160,7 @@
 
 
 
-  <title> 闭包 | {...Coding } </title>
+  <title> 闭包 | Sven's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -207,7 +205,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">{...Coding }</span>
+        <span class="site-title">Sven's Notes</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -305,11 +303,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sven">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="{...Coding }">
+      <meta itemprop="name" content="Sven's Notes">
     </span>
 
     
@@ -372,21 +370,27 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/08/21/closure/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/21/closure/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
           
+             <span id="/2016/08/21/closure/" class="leancloud_visitors" data-flag-title="闭包">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
 
           
@@ -404,23 +408,23 @@
       
 
       
-        <h2 id="一个例子"><a href="#一个例子" class="headerlink" title="一个例子"></a>一个例子</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo= <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> a=<span class="number">1</span>;</div><div class="line">&#125;;</div><div class="line">foo();</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(a)); <span class="comment">//undefined</span></div></pre></td></tr></table></figure>
-<img src="/2016/08/21/closure/closure1.jpg" alt="closure1.jpg" title="">
-<p>可以看到，函数内变量<code>a</code>无法被外部访问。</p>
-<h2 id="又一个例子"><a href="#又一个例子" class="headerlink" title="又一个例子"></a>又一个例子</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> localVal = <span class="number">1</span>;</div><div class="line">  <span class="keyword">return</span> localVal;</div><div class="line">&#125;</div><div class="line">outer();   <span class="comment">//1</span></div></pre></td></tr></table></figure>
-<p>在<code>outer</code>调用后<code>localVal</code>被释放。</p>
-<a id="more"></a>
-<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> localValue = <span class="number">1</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="keyword">return</span> localValue;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> func = outer();</div><div class="line">func();</div></pre></td></tr></table></figure>
-<img src="/2016/08/21/closure/closure2.jpg" alt="closure2.jpg" title="">
-<p>这个例子中，<code>localValue</code>是函数<code>outer</code>的局部变量。<code>func</code>就是匿名函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> localValue;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<img src="/2016/08/21/closure/closure3.jpg" alt="closure3.jpg" title="">
-<p>在调用<code>func</code>时，可以访问到函数<code>outer</code>的局部变量<code>localValue</code>,这就是闭包现象。</p>
-<blockquote>
+        <blockquote>
 <p>闭包是指那些能够访问独立(自由)变量的函数 (变量在本地使用，但定义在一个封闭的作用域中)。换句话说，这些函数可以“记忆”它被创建时候的环境。</p>
 </blockquote>
-<p>我们可以认为上例中变量<code>localValue</code>被保存了下来，而不会销毁。</p>
-<h2 id="闭包的应用"><a href="#闭包的应用" class="headerlink" title="闭包的应用"></a>闭包的应用</h2><p>我们有意识或无意识地都使用到了闭包，比如DOM的绑定事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">!<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> localData = <span class="string">'localData Here'</span>;</div><div class="line">  <span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(localData); <span class="comment">//localData Here</span></div><div class="line">  &#125;)</div><div class="line">&#125;();</div></pre></td></tr></table></figure></p>
-<p>当点击页面时，就访问到了匿名函数的局部变量<code>localData</code>。<br><img src="/2016/08/21/closure/closure4.jpg" alt="closure4.jpg" title=""></p>
+<h2 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h2><p>考虑如下情况：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo= <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> a=<span class="number">1</span>;</div><div class="line">&#125;;</div><div class="line">foo();</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(a));  <span class="comment">//undefined</span></div></pre></td></tr></table></figure>
+<p>函数<code>foo()</code>创建了一个局部变量<code>a</code>，仅在函数内部可以访问。</p>
+<a id="more"></a>
+<p>再考虑一种情况：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> localVal = <span class="number">1</span>;</div><div class="line">  <span class="keyword">return</span> localVal;</div><div class="line">&#125;</div><div class="line">outer();  <span class="comment">//1</span></div></pre></td></tr></table></figure>
+<p>执行函数<code>outer()</code>后，<code>localVal</code>被释放。</p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>现在来看一个有意思的例子</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> localValue = <span class="number">1</span>;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getLocalValue</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> localValue;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> getLocalValue;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> func = outer();</div><div class="line">func();  <span class="comment">//1</span></div></pre></td></tr></table></figure>
+<p>函数<code>outer()</code>创建了一个局部变量<code>localValue</code>，和一个函数<code>getLocalValue()</code>。在执行语句<code>var func = outer()</code>过后，我们可能会认为<code>localValue</code>就无法被访问到了。然而事实并非如此，执行<code>func()</code>仍然能够访问到变量<code>localValue</code> 。</p>
+<p>造成这个现象的原因就是<code>func</code>变成了一个闭包。闭包是一种特殊的对象。它由两部分构成：函数，以及创建该函数的环境。环境由闭包创建时在作用域中的任何局部变量组成。在这个例子中，<code>func</code>是一个闭包，由<code>getLocalValue</code>和<code>localValue</code>组成。</p>
+<h2 id="闭包的应用"><a href="#闭包的应用" class="headerlink" title="闭包的应用"></a>闭包的应用</h2><p>我们有意识或无意识地都使用到了闭包，比如DOM的绑定事件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">clickEvent</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> localData = <span class="string">'localData Here'</span>;</div><div class="line">  <span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(localData);</div><div class="line">  &#125;)</div><div class="line">&#125;;</div><div class="line">clickEvent();</div></pre></td></tr></table></figure>
+<p>当点击页面时，就访问到了创建闭包时的局部变量<code>localData</code>。</p>
 
       
     </div>
@@ -442,6 +446,21 @@
     <div>
       
         
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Sven
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://yuboyan.com/2016/08/21/closure/" title="闭包">http://yuboyan.com/2016/08/21/closure/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
 
       
     </div>
@@ -492,25 +511,6 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/08/21/closure/"
-     data-title="闭包"
-     data-content=""
-     data-url="http://yuboyan.com/2016/08/21/closure/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -521,10 +521,6 @@
 
           
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/08/21/closure/"
-           data-title="闭包" data-url="http://yuboyan.com/2016/08/21/closure/">
-      </div>
     
   </div>
 
@@ -560,7 +556,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.png"
+               src="/images/avatar.gif"
                alt="Sven" />
           <p class="site-author-name" itemprop="name">Sven</p>
            
@@ -606,6 +602,17 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/YutHelloWorld" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -629,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一个例子"><span class="nav-number">1.</span> <span class="nav-text">一个例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#又一个例子"><span class="nav-number">2.</span> <span class="nav-text">又一个例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包"><span class="nav-number">3.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包的应用"><span class="nav-number">4.</span> <span class="nav-text">闭包的应用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量作用域"><span class="nav-number">1.</span> <span class="nav-text">变量作用域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包"><span class="nav-number">2.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包的应用"><span class="nav-number">3.</span> <span class="nav-text">闭包的应用</span></a></li></ol></div>
             
 
           </div>
@@ -673,6 +680,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
         
       </div>
@@ -681,6 +708,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -763,52 +792,151 @@
 
   
 
-  
-    
+
   
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"yuboyan"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("B3OI22wbPAD2dgWTrzo7gMut-gzGzoHsz", "yWqhY99yUzV3C2E3y8f0SAG9");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
   </script>
 
-  
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
 
   
 
