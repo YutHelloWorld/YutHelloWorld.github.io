@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[比较运算符&等号]]></title>
       <url>%2F2017%2F03%2F28%2Fcomparison-operators%2F</url>
-      <content type="text"><![CDATA[JavaScript 比较运算符和等号使用规范 优先使用===和!==而不是==和!= 条件表达式例如 if 语句通过抽象方法 ToBoolean 强制计算它们的表达式并且总是遵守下面的规则： 对象 被计算为 true Undefined 被计算为 false Null 被计算为 false 布尔值 被计算为 布尔的值 数字 如果是 +0、-0、或 NaN 被计算为 false, 否则为 true 字符串 如果是空字符串 ‘’ 被计算为 false，否则为 true 1234if ([0]) &#123; // true // An array is an object, objects evaluate to true&#125; 使用简写 12345678910111213141516171819// badif (name !== '') &#123; // ...stuff...&#125;// goodif (name) &#123; // ...stuff...&#125;// badif (collection.length &gt; 0) &#123; // ...stuff...&#125;// goodif (collection.length) &#123; // ...stuff...&#125;]]></content>
+      <content type="text"><![CDATA[原文 优先使用===和!==而不是==和!= 条件表达式例如 if 语句通过抽象方法 ToBoolean 强制计算它们的表达式并且总是遵守下面的规则： 对象 被计算为 true Undefined 被计算为 false Null 被计算为 false 布尔值 被计算为 布尔的值 数字 如果是 +0、-0、或 NaN 被计算为 false, 否则为 true 字符串 如果是空字符串 ‘’ 被计算为 false，否则为 true 1234if ([0]) &#123; // true // An array is an object, objects evaluate to true&#125; 使用简写 12345678910111213141516171819// badif (name !== '') &#123; // ...stuff...&#125;// goodif (name) &#123; // ...stuff...&#125;// badif (collection.length &gt; 0) &#123; // ...stuff...&#125;// goodif (collection.length) &#123; // ...stuff...&#125;]]></content>
     </entry>
 
     
