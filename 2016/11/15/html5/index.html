@@ -1,0 +1,913 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="html," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="概述在做移动端Web页面时，常常使用到一些HTML5的新特特性。而HTML5的设计目的是为了在移动设备上支持多媒体。经常有些同学问到相关的问题，这里做些详细全面的总结，不定期的更新。
+新特性
+用于绘画的canvas元素
+用于媒介回放的 video 和 audio 元素
+对本地离线存储的更好的支持
+新的特殊内容元素，比如article、footer、header、nav、section
+新的表单控件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5新特性">
+<meta property="og:url" content="http://yuboyan.com/2016/11/15/html5/index.html">
+<meta property="og:site_name" content="Sven's Notes">
+<meta property="og:description" content="概述在做移动端Web页面时，常常使用到一些HTML5的新特特性。而HTML5的设计目的是为了在移动设备上支持多媒体。经常有些同学问到相关的问题，这里做些详细全面的总结，不定期的更新。
+新特性
+用于绘画的canvas元素
+用于媒介回放的 video 和 audio 元素
+对本地离线存储的更好的支持
+新的特殊内容元素，比如article、footer、header、nav、section
+新的表单控件">
+<meta property="og:updated_time" content="2017-01-12T11:35:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5新特性">
+<meta name="twitter:description" content="概述在做移动端Web页面时，常常使用到一些HTML5的新特特性。而HTML5的设计目的是为了在移动设备上支持多媒体。经常有些同学问到相关的问题，这里做些详细全面的总结，不定期的更新。
+新特性
+用于绘画的canvas元素
+用于媒介回放的 video 和 audio 元素
+对本地离线存储的更好的支持
+新的特殊内容元素，比如article、footer、header、nav、section
+新的表单控件">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yuboyan.com/2016/11/15/html5/"/>
+
+
+
+
+
+  <title>HTML5新特性 | Sven's Notes</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-86925747-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sven's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Quick notes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yuboyan.com/2016/11/15/html5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sven">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sven's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HTML5新特性</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-15T20:59:48+08:00">
+                2016-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术文档/" itemprop="url" rel="index">
+                    <span itemprop="name">技术文档</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在做移动端Web页面时，常常使用到一些HTML5的新特特性。而HTML5的设计目的是为了在移动设备上支持多媒体。经常有些同学问到相关的问题，这里做些详细全面的总结，不定期的更新。</p>
+<h2 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h2><ul>
+<li>用于绘画的canvas元素</li>
+<li>用于媒介回放的 video 和 audio 元素</li>
+<li>对本地离线存储的更好的支持</li>
+<li>新的特殊内容元素，比如article、footer、header、nav、section</li>
+<li>新的表单控件，比如calendar、date、time、email、url、search</li>
+</ul>
+<a id="more"></a>
+<h3 id="简洁的DOCTYPE"><a href="#简洁的DOCTYPE" class="headerlink" title="简洁的DOCTYPE"></a>简洁的DOCTYPE</h3><p>HTML5 只有一个简单的文档类型：<code>&lt;!DOCTYPE html&gt;</code>。它不使用版本，因此该文档类型适用所有版本的HTML。</p>
+<h3 id="简单易记的语言标签"><a href="#简单易记的语言标签" class="headerlink" title="简单易记的语言标签"></a>简单易记的语言标签</h3><p>你并不需要在<code>&lt;html&gt;</code>中使用xmlns 或xml:lang标记。<code>&lt;html lang=”en”&gt;</code>将对HTML5 有效。</p>
+<h3 id="简单易记的编码类型"><a href="#简单易记的编码类型" class="headerlink" title="简单易记的编码类型"></a>简单易记的编码类型</h3><p>你现在可以在meta 标签中使用’charset’：<code>&lt;meta charset=”utf-8″ /&gt;</code></p>
+<h3 id="具有boolean值的属性"><a href="#具有boolean值的属性" class="headerlink" title="具有boolean值的属性"></a>具有boolean值的属性</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 只写属性不写属性值代表属性为true --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">checked</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 不写属性代表属性为false --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 属性值=属性名,代表属性为true --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">checked</span>=<span class="string">"checked"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 属性值=空字符串，代表属性为true --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">checked</span>=<span class="string">""</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="HTML5的基本布局"><a href="#HTML5的基本布局" class="headerlink" title="HTML5的基本布局"></a>HTML5的基本布局</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">article</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span><span class="tag">&lt;/<span class="name">header</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">aside</span>&gt;</span><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">footer</span>&gt;</span><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">article</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>&lt;article&gt;</code> 元素代表文档、页面或应用程序中独立的、完整的、可以独自被外部引用的内容，与上下文不相关的独立内容</li>
+<li><code>&lt;section&gt;</code> 表示页面中的一个内容区块，比如章节、页眉、页脚或页面中的其他部分</li>
+<li>不要为没有标题的内容区块使用section元素</li>
+<li><code>&lt;nav&gt;</code>  表示页面中导航链接的部分，例如：传统导航条，侧边栏导航，页内导航，翻页等</li>
+<li><code>&lt;aside&gt;</code> 表示article元素的内容之外的、与article元素的内容相关的辅助信息，它可以包含与当前页面或主要内容相关的引用、侧边栏、广告、导航条，以及其他类似的有别于主要内容的部分</li>
+<li><code>&lt;header&gt;</code> 表示页面中一个内容区块或整个页面的标题</li>
+<li><code>&lt;hgroup&gt;</code>  将标题及其子标题进行分组的元素。hgroup元素通常会将h1-h6元素进行分组，譬如一个内容区块的标题及其子标题算一组。  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">hgroup</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>文章主标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">h2</span>&gt;</span>文章子标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">hgroup</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>一个普通的Html5页面结构会如下所示：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">header</span>&gt;</span><span class="tag">&lt;/<span class="name">header</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">nav</span>&gt;</span>导航<span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">article</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">section</span>&gt;</span>区块<span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">article</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">aside</span>&gt;</span>侧边栏<span class="tag">&lt;/<span class="name">aside</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">footer</span>&gt;</span>页脚<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="HTML5对表单的增强"><a href="#HTML5对表单的增强" class="headerlink" title="HTML5对表单的增强"></a>HTML5对表单的增强</h2><p>Html5新增了多个控件类型，如输入网址的url类型，输入电子邮箱地址的email类型，用于输入日期的date类型，更有用于输入颜色的color类型等等。更为神奇的是这些类型还内建表单验证，如required属性就说明该表项不能为空，max属性提供了该表项输入允许的最大值，当然在Html4中这些功能也可以通过javascript来实现，但是的内建在Html5中的表单验证优越性不言而喻。需要注意的是，现在Html5的输入类型还没有被所有浏览器所支持。</p>
+<p>感兴趣的同学可以测试下面的代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line">    Email:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">required</span> /&gt;</span><span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line">    Number:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">max</span>=<span class="string">"10"</span> /&gt;</span><span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line">    Date :<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"date"</span>&gt;</span><span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line">    File:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">accept</span>=<span class="string">"image/png"</span> /&gt;</span><span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>input标签新增的TYPE:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">date - 选取日、月、年</div><div class="line">month - 选取月、年</div><div class="line">week - 选取周和年</div><div class="line">time - 选取时间（小时和分钟）</div><div class="line">datetime - 选取时间、日、月、年（UTC 时间）</div><div class="line">datetime-local - 选取时间、日、月、年（本地时间）</div><div class="line">range－数字范围选择</div><div class="line">number－填写数字</div><div class="line">url-url地址</div><div class="line">email-邮件</div><div class="line">color-颜色选取</div><div class="line">search-搜索</div></pre></td></tr></table></figure></p>
+<h2 id="视频和音频的支持"><a href="#视频和音频的支持" class="headerlink" title="视频和音频的支持"></a>视频和音频的支持</h2><h3 id="视频的支持"><a href="#视频的支持" class="headerlink" title="视频的支持"></a>视频的支持</h3><p>带控制器的视频播放器<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">"movie.mp4"</span> <span class="attr">controls</span>=<span class="string">"controls"</span>&gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span></div><div class="line">/*如果考虑到不同浏览器对视频文件的兼容性*/</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">width</span>=<span class="string">"320"</span> <span class="attr">height</span>=<span class="string">"240"</span> <span class="attr">controls</span>=<span class="string">"controls"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"movie.ogg"</span> <span class="attr">type</span>=<span class="string">"video/ogg"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"movie.mp4"</span> <span class="attr">type</span>=<span class="string">"video/mp4"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Your browser does not support the video tag.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>video 元素允许含有多个 source 元素。source 元素可以链接不同的视频文件。浏览器将使用第一个可识别的格式：</p>
+<ol>
+<li>如果浏览器支持video元素，也支持H264（mp4格式），那么就使用第一个视频；</li>
+<li>如果浏览器支持video元素，不支持H264（mp4格式）但支持Ogg，那么用第二个视频；</li>
+<li>如果浏览器不支持video元素，那么就播放Flash；</li>
+<li>如果浏览器不支持video元素，也不支持Flash，那么就给出了下载链接。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autoplay</td>
+<td>autoplay</td>
+<td>如果出现该属性，则视频在就绪后马上播放。</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>controls</td>
+<td>如果出现该属性，则向用户显示控件，比如播放按钮。</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>loop</td>
+<td>如果出现该属性，则当媒介文件完成播放后再次开始播放。</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>muted</td>
+<td>规定视频的音频输出应该被静音。</td>
+</tr>
+<tr>
+<td>poster</td>
+<td>URL</td>
+<td>规定视频下载时显示的图像，或者在用户点击播放按钮前显示的图像。</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>preload</td>
+<td>如果出现该属性，则视频在页面加载时进行加载，并预备播放。如果使用 “autoplay”，则忽略该属性。</td>
+</tr>
+<tr>
+<td>src</td>
+<td>url</td>
+<td>要播放的视频的 URL</td>
+</tr>
+<tr>
+<td>width</td>
+<td>pixels</td>
+<td>设置视频播放器的宽度。</td>
+</tr>
+<tr>
+<td>height</td>
+<td>pixels</td>
+<td>设置视频播放器的高度。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="音频的支持"><a href="#音频的支持" class="headerlink" title="音频的支持"></a>音频的支持</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"song.ogg"</span> <span class="attr">controls</span>=<span class="string">"controls"</span>&gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>如果考虑到不同浏览器对视频文件的兼容性<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">width</span>=<span class="string">"320"</span> <span class="attr">height</span>=<span class="string">"240"</span> <span class="attr">controls</span>=<span class="string">"controls"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"song.ogg"</span> <span class="attr">type</span>=<span class="string">"audio/ogg"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"song.mp3"</span> <span class="attr">type</span>=<span class="string">"audio/mpeg"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Your browser does not support the audio tag.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">audio</span> &gt;</span></div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autoplay</td>
+<td>autoplay</td>
+<td>如果出现该属性，则音频在就绪后马上播放。</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>controls</td>
+<td>如果出现该属性，则向用户显示控件，比如播放按钮。</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>loop</td>
+<td>如果出现该属性，则每当音频结束时重新开始播放。</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>preload</td>
+<td>如果出现该属性，则音频在页面加载时进行加载，并预备播放。如果使用 “autoplay”，则忽略该属性。</td>
+</tr>
+<tr>
+<td>src</td>
+<td>url</td>
+<td>要播放的音频的 URL</td>
+</tr>
+</tbody>
+</table>
+<h2 id="本地存储"><a href="#本地存储" class="headerlink" title="本地存储"></a>本地存储</h2><p>一提到存储，大家可能第一时间想到的是本地的文件存储，服务端的数据库存储等。那么html5时代，我们的存储是否会有更多选择呢？答案是肯定的。</p>
+<h3 id="关于存储"><a href="#关于存储" class="headerlink" title="关于存储"></a>关于存储</h3><p>在html5之前的存储方式：</p>
+<ol>
+<li>cookies诞生<ul>
+<li>通过http请求头带到不同页面上</li>
+<li>一个域名下的cookie大小限制为4k（谷歌火狐不限制大小，但数量过多同样会有问题）</li>
+<li>主域名污染，子域名的请求，都会把主域名的cookie带上。 (可以比较qq.com和y.qq.com的cookie比较document.cookie=”lesson=html5;path=/;domain=qq.com”)</li>
+</ul>
+</li>
+<li>UserData<ul>
+<li>只有IE才支持</li>
+<li>xml文件</li>
+</ul>
+</li>
+</ol>
+<h3 id="HTML的web存储方法"><a href="#HTML的web存储方法" class="headerlink" title="HTML的web存储方法"></a>HTML的web存储方法</h3><h4 id="HTML5-提供两种web存储方法，localStorage-与-sessionStorage"><a href="#HTML5-提供两种web存储方法，localStorage-与-sessionStorage" class="headerlink" title="HTML5 提供两种web存储方法，localStorage 与 sessionStorage"></a>HTML5 提供两种web存储方法，localStorage 与 sessionStorage</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- 解决了存储大小的问题</div><div class="line">- 解决了请求头臃肿的问题</div><div class="line">- 跨浏览器</div><div class="line">- 键值对的形式进行存储</div></pre></td></tr></table></figure>
+<h4 id="localStorage-与-sessionStorage-区别"><a href="#localStorage-与-sessionStorage-区别" class="headerlink" title="localStorage 与 sessionStorage 区别"></a>localStorage 与 sessionStorage 区别</h4><p>过期时间：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">localStorage没有过期时间，只要不clear或remove，数据会一直保存。</div><div class="line">sessionStorage 针对一个session进行数据存储，生命周期与session相同，当用户关闭浏览器后，数据将被删除。</div></pre></td></tr></table></figure></p>
+<p>大小：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">localStorage标准大小限制为5M</div></pre></td></tr></table></figure></p>
+<h4 id="在使用-web-存储前-应检查浏览器是否支持-localStorage-和sessionStorage"><a href="#在使用-web-存储前-应检查浏览器是否支持-localStorage-和sessionStorage" class="headerlink" title="在使用 web 存储前,应检查浏览器是否支持 localStorage 和sessionStorage:"></a>在使用 web 存储前,应检查浏览器是否支持 localStorage 和sessionStorage:</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span>(Storage)!==<span class="string">"undefined"</span>)&#123;</div><div class="line"><span class="comment">// 是的! 支持 localStorage  sessionStorage 对象!</span></div><div class="line"><span class="comment">// 一些代码.....</span></div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line"><span class="comment">// 抱歉! 不支持 web 存储。</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="两者特点："><a href="#两者特点：" class="headerlink" title="两者特点："></a>两者特点：</h3><p>localStorage和sessionStorage都具有相同的操作方法，例如setItem、getItem和removeItem等</p>
+<h3 id="localStorage和sessionStorage的方法"><a href="#localStorage和sessionStorage的方法" class="headerlink" title="localStorage和sessionStorage的方法"></a>localStorage和sessionStorage的方法</h3><ul>
+<li><p>setItem存储value 用途：将value存储到key字段 用法：.setItem( key, value) 代码示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sessionStorage.setItem(<span class="string">"key"</span>, <span class="string">"value"</span>);</div><div class="line">localStorage.setItem(<span class="string">"site"</span>, <span class="string">"js8.in"</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>getItem获取value 用途：获取指定key本地存储的值 用法：.getItem(key) 代码示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> value = sessionStorage.getItem(<span class="string">"key"</span>);</div><div class="line"><span class="keyword">var</span> site = localStorage.getItem(<span class="string">"site"</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>removeItem删除key 用途：删除指定key本地存储的值 用法：.removeItem(key) 代码示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sessionStorage.removeItem(<span class="string">"key"</span>);</div><div class="line">localStorage.removeItem(<span class="string">"site"</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>clear清除所有的key/value 用途：清除所有的key/value 用法：.clear() 代码示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sessionStorage.clear();</div><div class="line">localStorage.clear();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="如果要保存非字符串的内容，建议使用JSON来处理。"><a href="#如果要保存非字符串的内容，建议使用JSON来处理。" class="headerlink" title="如果要保存非字符串的内容，建议使用JSON来处理。"></a>如果要保存非字符串的内容，建议使用JSON来处理。</h4><ul>
+<li><p>写入数据时用JSON.stringify转成字符串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>,<span class="attr">c</span>:<span class="number">3</span>&#125;;</div><div class="line">localStorage.setItem(<span class="string">"data"</span>,<span class="built_in">JSON</span>.stringify(data));</div></pre></td></tr></table></figure>
+</li>
+<li><p>读取数据时用JSON.parse把字符串转为之前的格式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var JasonString =localStorage.getItem(&quot;data&quot;);</div><div class="line">console.log(JSON.parse(JasonString));</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="storage事件"><a href="#storage事件" class="headerlink" title="storage事件"></a>storage事件</h4><p>storage还提供了storage事件，当键值改变或者clear的时候，就可以触发storage事件，如下面的代码就添加了一个storage事件改变的监听：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//可以通过添加storage侦听，来监测本地存储数据的变化</span></div><div class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.addEventListener)&#123;</div><div class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">"storage"</span>,handle_storage,<span class="literal">false</span>);</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.attachEvent)&#123;</div><div class="line">    <span class="built_in">window</span>.attachEvent(<span class="string">"onstorage"</span>,handle_storage);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">handle_storage</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(!e)&#123;e=<span class="built_in">window</span>.event;&#125;</div><div class="line">    <span class="keyword">var</span> status = &#123;&#125;;</div><div class="line">    status.key = event.key;</div><div class="line">    status.oldValue = event.oldValue;</div><div class="line">    status.newValue = event.newValue;</div><div class="line">    status.url = event.url;</div><div class="line">    status.storage = event.storageArea;</div><div class="line">    <span class="built_in">console</span>.log(status);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>storage事件对象的具体属性如下表:</p>
+<ul>
+<li>storageArea: 表示存储类型（Session或Local）</li>
+<li>key:发生改变项的key</li>
+<li>oldValue: key的原值</li>
+<li>newValue: key的新值</li>
+<li>url*: key改变发生的URL</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/html/" rel="tag"># html</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/06/js-oop/" rel="next" title="Javascript OOP 继承与原型链详解">
+                <i class="fa fa-chevron-left"></i> Javascript OOP 继承与原型链详解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/19/typeof/" rel="prev" title="如何判断数据类型">
+                如何判断数据类型 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="Sven" />
+          <p class="site-author-name" itemprop="name">Sven</p>
+           
+              <p class="site-description motion-element" itemprop="description">Less  is  More</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新特性"><span class="nav-number">2.</span> <span class="nav-text">新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简洁的DOCTYPE"><span class="nav-number">2.1.</span> <span class="nav-text">简洁的DOCTYPE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单易记的语言标签"><span class="nav-number">2.2.</span> <span class="nav-text">简单易记的语言标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单易记的编码类型"><span class="nav-number">2.3.</span> <span class="nav-text">简单易记的编码类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具有boolean值的属性"><span class="nav-number">2.4.</span> <span class="nav-text">具有boolean值的属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5的基本布局"><span class="nav-number">3.</span> <span class="nav-text">HTML5的基本布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5对表单的增强"><span class="nav-number">4.</span> <span class="nav-text">HTML5对表单的增强</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视频和音频的支持"><span class="nav-number">5.</span> <span class="nav-text">视频和音频的支持</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#视频的支持"><span class="nav-number">5.1.</span> <span class="nav-text">视频的支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#音频的支持"><span class="nav-number">5.2.</span> <span class="nav-text">音频的支持</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地存储"><span class="nav-number">6.</span> <span class="nav-text">本地存储</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于存储"><span class="nav-number">6.1.</span> <span class="nav-text">关于存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML的web存储方法"><span class="nav-number">6.2.</span> <span class="nav-text">HTML的web存储方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML5-提供两种web存储方法，localStorage-与-sessionStorage"><span class="nav-number">6.2.1.</span> <span class="nav-text">HTML5 提供两种web存储方法，localStorage 与 sessionStorage</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#localStorage-与-sessionStorage-区别"><span class="nav-number">6.2.2.</span> <span class="nav-text">localStorage 与 sessionStorage 区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在使用-web-存储前-应检查浏览器是否支持-localStorage-和sessionStorage"><span class="nav-number">6.2.3.</span> <span class="nav-text">在使用 web 存储前,应检查浏览器是否支持 localStorage 和sessionStorage:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#两者特点："><span class="nav-number">6.3.</span> <span class="nav-text">两者特点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#localStorage和sessionStorage的方法"><span class="nav-number">6.4.</span> <span class="nav-text">localStorage和sessionStorage的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#如果要保存非字符串的内容，建议使用JSON来处理。"><span class="nav-number">6.4.1.</span> <span class="nav-text">如果要保存非字符串的内容，建议使用JSON来处理。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#storage事件"><span class="nav-number">6.4.2.</span> <span class="nav-text">storage事件</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sven</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
